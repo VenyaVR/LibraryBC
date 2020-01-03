@@ -23,7 +23,6 @@ private:
 		
 	}*Last;
 	
-	
 	unsigned __int64 ItemCounter;
 	
 public:
@@ -48,7 +47,7 @@ DataTemplate List<DataTemplate>::operator[](int IndexItem) //
 {
 	DataTypeList *CopyLast = Last;
 	
-	for(__int64 counter = 0; counter < IndexItem; counter++)
+	for(unsigned __int64 counter = 0; counter < IndexItem; counter++)
 		CopyLast = CopyLast -> next;
 	
 	return CopyLast -> data;
